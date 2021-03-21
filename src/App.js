@@ -1,13 +1,22 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
+  const [thing, setThing] = useState(false);
+
+  function differentWay() {
+    setThing(!thing);
+  }
+
+  useEffect(() => {
+    console.log(thing);
+  }, [thing]);
+
   return (
     <html>
       <head></head>
       <body>
-        <script src="https://www.puck-js.com/puck.js"></script>
-        <button onClick="Puck.write('LED1.set();\n');">LED On!</button>
-        <button onClick="Puck.write('LED1.reset();\n');">LED Off!</button>
+        <button onClick={differentWay}>hello</button>
       </body>
     </html>
   );
