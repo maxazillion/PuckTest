@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <html>
+      <head></head>
+      <body>
+        <script src="https://www.puck-js.com/puck.js"></script>
+        <button onClick="Puck.write('LED1.set();\n');">LED On!</button>
+        <button onClick="Puck.write('LED1.reset();\n');">LED Off!</button>
+      </body>
+    </html>
   );
 }
 
